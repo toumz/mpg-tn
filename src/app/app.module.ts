@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const appRoutes: Routes = [
@@ -17,8 +19,18 @@ const appRoutes: Routes = [
     component: PlayerComponent,
     data: { title: 'player List' }
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { title: 'Login' }
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    data: { title: 'Sign up' }
+  },
   { path: '',
-    redirectTo: '/players',
+    redirectTo: '/login',
     pathMatch: 'full'
   }
 ];
@@ -26,12 +38,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PlayerComponent
+    PlayerComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     Ng2SmartTableModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
