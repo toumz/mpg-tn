@@ -11,9 +11,19 @@ import { PlayerComponent } from './player/player.component';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { HomeComponent } from './home/home.component';
 
 
 const appRoutes: Routes = [
+  { path: '404',
+  component: NotfoundComponent,
+  data: { title: 'Login' }
+  },
+  { path: 'home',
+  component: HomeComponent,
+  data: { title: 'Home' }
+  },
   {
     path: 'players',
     component: PlayerComponent,
@@ -40,7 +50,9 @@ const appRoutes: Routes = [
     AppComponent,
     PlayerComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NotfoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

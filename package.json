@@ -30,6 +30,7 @@
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "lesshat": "^4.1.0",
     "mongoose": "^5.2.12",
     "morgan": "^1.9.0",
     "ng2-completer": "^2.0.8",
